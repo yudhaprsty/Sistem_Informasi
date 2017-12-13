@@ -4,11 +4,20 @@
 		$id = $_SESSION['id'];
 		$query = mysqli_query($con, "SELECT * FROM user WHERE id = '$id'");
 		$result = mysqli_fetch_array($query);
+		$author = $result['status_id'];
+		if($author == 1)
+		{
 ?>
-	<script> document.location.href='halaman_depan_pegawai.php';</script>
+		<script> document.location.href='halaman_depan.php';</script>
 <?php
-	}
+		}
+		else {
 ?>
+		<script> document.location.href='halaman_depan_pegawai.php';</script>
+<?php
+			}
+		}
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">

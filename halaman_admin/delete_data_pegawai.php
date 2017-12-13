@@ -1,6 +1,6 @@
 <?php
 	include "connect.php";
-	
+
     $id = $_GET['id'];
 	$_SESSION['id_hapus'] = $id;
     $sql = "SELECT * FROM user WHERE id = {$id}";
@@ -11,14 +11,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Remove Data Pasien</title>
+		<title>Delete Data Pegawai</title>
 	</head>
 	<body>
-		<h3>Do you really want to remove ?</h3>
+		<h3>Do you really want to delete ?</h3>
 		<form action="hub_delete_pegawai.php" method="post">
 			<button type="submit">Save Changes</button>
-			<a href="daftar_pasien.php"><button type="button">Back</button></a>
+			<a href="daftar_pegawai.php"><button type="button">Back</button></a>
 		</form>
 	</body>
 </html>
-

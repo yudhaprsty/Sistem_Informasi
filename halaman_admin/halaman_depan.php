@@ -8,6 +8,7 @@
 	$tanggal = getdate();
 	$tahun = $tanggal['year'];
 
+	#Grafik Usia
 	$usia11 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND usia_pasien<='20' AND MONTH(tanggal_daftar)='1' ");
 	$usia21 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND usia_pasien>'20' AND usia_pasien<='50' AND MONTH(tanggal_daftar)='1'");
 	$usia31 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND usia_pasien>'50'  AND MONTH(tanggal_daftar)='1'");
@@ -103,6 +104,178 @@
 	$jumlah_usia112 = mysqli_num_rows($usia112);
 	$jumlah_usia212 = mysqli_num_rows($usia212);
 	$jumlah_usia312 = mysqli_num_rows($usia312);
+
+	#Grafik Pekerjaan
+	$tanggal = getdate();
+	$tahun = $tanggal['year'];
+
+	$pekerjaan11 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='1' ");
+	$pekerjaan21 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='1'");
+	$pekerjaan31 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='1'");
+	$pekerjaan41 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='1'");
+	$pekerjaan51 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='1'");
+	$pekerjaan61 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='1'");
+
+	$pekerjaan12 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='2' ");
+	$pekerjaan22 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='2'");
+	$pekerjaan32 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='2'");
+	$pekerjaan42 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='2'");
+	$pekerjaan52 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='2'");
+	$pekerjaan62 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='2'");
+
+	$pekerjaan13 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='3' ");
+	$pekerjaan23 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='3'");
+	$pekerjaan33 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='3'");
+	$pekerjaan43 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='3'");
+	$pekerjaan53 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='3'");
+	$pekerjaan63 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='3'");
+
+	$pekerjaan14 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='4' ");
+	$pekerjaan24 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='4'");
+	$pekerjaan34 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='4'");
+	$pekerjaan44 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='4'");
+	$pekerjaan54 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='4'");
+	$pekerjaan64 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='4'");
+
+	$pekerjaan15 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='5' ");
+	$pekerjaan25 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='5'");
+	$pekerjaan35 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='5'");
+	$pekerjaan45 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='5'");
+	$pekerjaan55 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='5'");
+	$pekerjaan65 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='5'");
+
+	$pekerjaan16 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='6' ");
+	$pekerjaan26 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='6'");
+	$pekerjaan36 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='6'");
+	$pekerjaan46 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='6'");
+	$pekerjaan56 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='6'");
+	$pekerjaan66 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='6'");
+
+	$pekerjaan17 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='7' ");
+	$pekerjaan27 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='7'");
+	$pekerjaan37 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='7'");
+	$pekerjaan47 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='7'");
+	$pekerjaan57 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='7'");
+	$pekerjaan67 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='7'");
+
+	$pekerjaan18 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='8' ");
+	$pekerjaan28 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='8'");
+	$pekerjaan38 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='8'");
+	$pekerjaan48 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='8'");
+	$pekerjaan58 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='8'");
+	$pekerjaan68 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='8'");
+
+	$pekerjaan19 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='19' ");
+	$pekerjaan29 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='9'");
+	$pekerjaan39 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='9'");
+	$pekerjaan49 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='9'");
+	$pekerjaan59 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='9'");
+	$pekerjaan69 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='9'");
+
+	$pekerjaan110 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='10' ");
+	$pekerjaan210 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='10'");
+	$pekerjaan310 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='10'");
+	$pekerjaan410 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='10'");
+	$pekerjaan510 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='10'");
+	$pekerjaan610 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='10'");
+
+	$pekerjaan111 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='11' ");
+	$pekerjaan211 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='11'");
+	$pekerjaan311 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='11'");
+	$pekerjaan411 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='11'");
+	$pekerjaan511 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga'  AND MONTH(tanggal_daftar)='11'");
+	$pekerjaan611 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='11'");
+
+	$pekerjaan112 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Mahasiswi' AND MONTH(tanggal_daftar)='12' ");
+	$pekerjaan212 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Dosen'AND MONTH(tanggal_daftar)='12'");
+	$pekerjaan312 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Guru' AND MONTH(tanggal_daftar)='12'");
+	$pekerjaan412 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='PNS' AND MONTH(tanggal_daftar)='12'");
+	$pekerjaan512 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Ibu Rumah Tangga' AND MONTH(tanggal_daftar)='12'");
+	$pekerjaan612 = $con->query("SELECT * FROM  data_pasien WHERE YEAR(tanggal_daftar)='$tahun' AND pekerjaan_pasien='Lainnya' AND MONTH(tanggal_daftar)='12'");
+
+	$jumlah_pekerjaan11 = mysqli_num_rows($pekerjaan11);
+	$jumlah_pekerjaan21 = mysqli_num_rows($pekerjaan21);
+	$jumlah_pekerjaan31 = mysqli_num_rows($pekerjaan31);
+	$jumlah_pekerjaan41 = mysqli_num_rows($pekerjaan41);
+	$jumlah_pekerjaan51 = mysqli_num_rows($pekerjaan51);
+	$jumlah_pekerjaan61 = mysqli_num_rows($pekerjaan61);
+
+	$jumlah_pekerjaan12 = mysqli_num_rows($pekerjaan12);
+	$jumlah_pekerjaan22 = mysqli_num_rows($pekerjaan22);
+	$jumlah_pekerjaan32 = mysqli_num_rows($pekerjaan32);
+	$jumlah_pekerjaan42 = mysqli_num_rows($pekerjaan42);
+	$jumlah_pekerjaan52 = mysqli_num_rows($pekerjaan52);
+	$jumlah_pekerjaan62 = mysqli_num_rows($pekerjaan62);
+
+	$jumlah_pekerjaan13 = mysqli_num_rows($pekerjaan13);
+	$jumlah_pekerjaan23 = mysqli_num_rows($pekerjaan23);
+	$jumlah_pekerjaan33 = mysqli_num_rows($pekerjaan33);
+	$jumlah_pekerjaan43 = mysqli_num_rows($pekerjaan43);
+	$jumlah_pekerjaan53 = mysqli_num_rows($pekerjaan53);
+	$jumlah_pekerjaan63 = mysqli_num_rows($pekerjaan63);
+
+	$jumlah_pekerjaan14 = mysqli_num_rows($pekerjaan14);
+	$jumlah_pekerjaan24 = mysqli_num_rows($pekerjaan24);
+	$jumlah_pekerjaan34 = mysqli_num_rows($pekerjaan34);
+	$jumlah_pekerjaan44 = mysqli_num_rows($pekerjaan44);
+	$jumlah_pekerjaan54 = mysqli_num_rows($pekerjaan54);
+	$jumlah_pekerjaan64 = mysqli_num_rows($pekerjaan64);
+
+	$jumlah_pekerjaan15 = mysqli_num_rows($pekerjaan15);
+	$jumlah_pekerjaan25 = mysqli_num_rows($pekerjaan25);
+	$jumlah_pekerjaan35 = mysqli_num_rows($pekerjaan35);
+	$jumlah_pekerjaan45 = mysqli_num_rows($pekerjaan45);
+	$jumlah_pekerjaan55 = mysqli_num_rows($pekerjaan55);
+	$jumlah_pekerjaan65 = mysqli_num_rows($pekerjaan65);
+
+	$jumlah_pekerjaan16 = mysqli_num_rows($pekerjaan16);
+	$jumlah_pekerjaan26 = mysqli_num_rows($pekerjaan26);
+	$jumlah_pekerjaan36 = mysqli_num_rows($pekerjaan36);
+	$jumlah_pekerjaan46 = mysqli_num_rows($pekerjaan46);
+	$jumlah_pekerjaan56 = mysqli_num_rows($pekerjaan56);
+	$jumlah_pekerjaan66 = mysqli_num_rows($pekerjaan66);
+
+	$jumlah_pekerjaan17 = mysqli_num_rows($pekerjaan17);
+	$jumlah_pekerjaan27 = mysqli_num_rows($pekerjaan27);
+	$jumlah_pekerjaan37 = mysqli_num_rows($pekerjaan37);
+	$jumlah_pekerjaan47 = mysqli_num_rows($pekerjaan47);
+	$jumlah_pekerjaan57 = mysqli_num_rows($pekerjaan57);
+	$jumlah_pekerjaan67 = mysqli_num_rows($pekerjaan67);
+
+	$jumlah_pekerjaan18 = mysqli_num_rows($pekerjaan18);
+	$jumlah_pekerjaan28 = mysqli_num_rows($pekerjaan28);
+	$jumlah_pekerjaan38 = mysqli_num_rows($pekerjaan38);
+	$jumlah_pekerjaan48 = mysqli_num_rows($pekerjaan48);
+	$jumlah_pekerjaan58 = mysqli_num_rows($pekerjaan58);
+	$jumlah_pekerjaan68 = mysqli_num_rows($pekerjaan68);
+
+	$jumlah_pekerjaan19 = mysqli_num_rows($pekerjaan19);
+	$jumlah_pekerjaan29 = mysqli_num_rows($pekerjaan29);
+	$jumlah_pekerjaan39 = mysqli_num_rows($pekerjaan39);
+	$jumlah_pekerjaan49 = mysqli_num_rows($pekerjaan49);
+	$jumlah_pekerjaan59 = mysqli_num_rows($pekerjaan59);
+	$jumlah_pekerjaan69 = mysqli_num_rows($pekerjaan69);
+
+	$jumlah_pekerjaan110 = mysqli_num_rows($pekerjaan110);
+	$jumlah_pekerjaan210 = mysqli_num_rows($pekerjaan210);
+	$jumlah_pekerjaan310 = mysqli_num_rows($pekerjaan310);
+	$jumlah_pekerjaan410 = mysqli_num_rows($pekerjaan410);
+	$jumlah_pekerjaan510 = mysqli_num_rows($pekerjaan510);
+	$jumlah_pekerjaan610 = mysqli_num_rows($pekerjaan610);
+
+	$jumlah_pekerjaan111 = mysqli_num_rows($pekerjaan111);
+	$jumlah_pekerjaan211 = mysqli_num_rows($pekerjaan211);
+	$jumlah_pekerjaan311 = mysqli_num_rows($pekerjaan311);
+	$jumlah_pekerjaan411 = mysqli_num_rows($pekerjaan411);
+	$jumlah_pekerjaan511 = mysqli_num_rows($pekerjaan511);
+	$jumlah_pekerjaan611 = mysqli_num_rows($pekerjaan611);
+
+	$jumlah_pekerjaan112 = mysqli_num_rows($pekerjaan112);
+	$jumlah_pekerjaan212 = mysqli_num_rows($pekerjaan212);
+	$jumlah_pekerjaan312 = mysqli_num_rows($pekerjaan312);
+	$jumlah_pekerjaan412 = mysqli_num_rows($pekerjaan412);
+	$jumlah_pekerjaan512 = mysqli_num_rows($pekerjaan512);
+	$jumlah_pekerjaan612 = mysqli_num_rows($pekerjaan612);
 ?>
 
 <!DOCTYPE html>
@@ -132,6 +305,7 @@
 	<link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 	<!-- Custom Theme Style -->
 	<link href="../build/css/custom.min.css" rel="stylesheet">
+	<!--Grafik Usia-->
 	<script type="text/javascript" src="js/loader.js"></script>
   <script type="text/javascript">
     google.charts.load('current', {'packages':['bar']});
@@ -139,7 +313,7 @@
 
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ['Usia', 'Usia <20', 'Usia >20 & <50', 'Usia >50'],
+        ['Bulan', 'Usia <20', 'Usia >20 & <50', 'Usia >50'],
         ['Jan', <?php echo $jumlah_usia11; ?>,  <?php echo $jumlah_usia21; ?>, <?php echo $jumlah_usia31; ?>],
 				['Feb', <?php echo $jumlah_usia12; ?>,  <?php echo $jumlah_usia22; ?>, <?php echo $jumlah_usia32; ?>],
 				['Mar', <?php echo $jumlah_usia13; ?>,  <?php echo $jumlah_usia23; ?>, <?php echo $jumlah_usia33; ?>],
@@ -161,6 +335,39 @@
       };
 
       var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  </script>
+	<!--grafik pekerjaan-->
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Bulan', 'Mahasiswi', 'Dosen', 'Guru', 'PNS', 'Ibu Rumah Tangga', 'Lainnya'],
+        ['Jan', <?php echo $jumlah_pekerjaan11; ?>,  <?php echo $jumlah_pekerjaan21; ?>, <?php echo $jumlah_pekerjaan31; ?>, <?php echo $jumlah_pekerjaan41; ?>, <?php echo $jumlah_pekerjaan51; ?>, <?php echo $jumlah_pekerjaan61; ?>],
+       	['Feb', <?php echo $jumlah_pekerjaan12; ?>,  <?php echo $jumlah_pekerjaan22; ?>, <?php echo $jumlah_pekerjaan32; ?>, <?php echo $jumlah_pekerjaan42; ?>, <?php echo $jumlah_pekerjaan52; ?>, <?php echo $jumlah_pekerjaan62; ?>],
+				['Mar', <?php echo $jumlah_pekerjaan13; ?>,  <?php echo $jumlah_pekerjaan23; ?>, <?php echo $jumlah_pekerjaan33; ?>, <?php echo $jumlah_pekerjaan43; ?>, <?php echo $jumlah_pekerjaan53; ?>, <?php echo $jumlah_pekerjaan63; ?>],
+				['Apr', <?php echo $jumlah_pekerjaan14; ?>,  <?php echo $jumlah_pekerjaan24; ?>, <?php echo $jumlah_pekerjaan34; ?>, <?php echo $jumlah_pekerjaan44; ?>, <?php echo $jumlah_pekerjaan54; ?>, <?php echo $jumlah_pekerjaan64; ?>],
+				['Mei', <?php echo $jumlah_pekerjaan15; ?>,  <?php echo $jumlah_pekerjaan25; ?>, <?php echo $jumlah_pekerjaan35; ?>, <?php echo $jumlah_pekerjaan45; ?>, <?php echo $jumlah_pekerjaan55; ?>, <?php echo $jumlah_pekerjaan65; ?>],
+				['Jun', <?php echo $jumlah_pekerjaan16; ?>,  <?php echo $jumlah_pekerjaan26; ?>, <?php echo $jumlah_pekerjaan36; ?>, <?php echo $jumlah_pekerjaan46; ?>, <?php echo $jumlah_pekerjaan56; ?>, <?php echo $jumlah_pekerjaan66; ?>],
+				['Jul', <?php echo $jumlah_pekerjaan17; ?>,  <?php echo $jumlah_pekerjaan27; ?>, <?php echo $jumlah_pekerjaan37; ?>, <?php echo $jumlah_pekerjaan47; ?>, <?php echo $jumlah_pekerjaan57; ?>, <?php echo $jumlah_pekerjaan67; ?>],
+				['Aug', <?php echo $jumlah_pekerjaan18; ?>,  <?php echo $jumlah_pekerjaan28; ?>, <?php echo $jumlah_pekerjaan38; ?>, <?php echo $jumlah_pekerjaan48; ?>, <?php echo $jumlah_pekerjaan58; ?>, <?php echo $jumlah_pekerjaan68; ?>],
+				['Sep', <?php echo $jumlah_pekerjaan19; ?>,  <?php echo $jumlah_pekerjaan29; ?>, <?php echo $jumlah_pekerjaan39; ?>, <?php echo $jumlah_pekerjaan49; ?>, <?php echo $jumlah_pekerjaan59; ?>, <?php echo $jumlah_pekerjaan69; ?>],
+				['Okt', <?php echo $jumlah_pekerjaan110; ?>,  <?php echo $jumlah_pekerjaan210; ?>, <?php echo $jumlah_pekerjaan310; ?>, <?php echo $jumlah_pekerjaan410; ?>, <?php echo $jumlah_pekerjaan510; ?>, <?php echo $jumlah_pekerjaan610; ?>],
+				['Nov', <?php echo $jumlah_pekerjaan111; ?>,  <?php echo $jumlah_pekerjaan211; ?>, <?php echo $jumlah_pekerjaan311; ?>, <?php echo $jumlah_pekerjaan411; ?>, <?php echo $jumlah_pekerjaan511; ?>, <?php echo $jumlah_pekerjaan611; ?>],
+				['Des', <?php echo $jumlah_pekerjaan112; ?>,  <?php echo $jumlah_pekerjaan212; ?>, <?php echo $jumlah_pekerjaan312; ?>, <?php echo $jumlah_pekerjaan412; ?>, <?php echo $jumlah_pekerjaan512; ?>, <?php echo $jumlah_pekerjaan612; ?>],
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Grafik Jenis Pekerjaan Pasien',
+        }
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('columnchart_material2'));
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
@@ -215,7 +422,6 @@
 								</li>
 								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="detail_pendapatan.php">Detail Pendapatan</a></li>
 										<li><a href="grafik_pendapatan.php">Grafik Pendapatan</a></li>
 									</ul>
 								</li>
@@ -256,19 +462,30 @@
 				<!-- top tiles -->
 				<div class="row tile_count">
 					<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-							<span class="count_top"><i class="fa fa-user"></i> Total Pasien</span>
-						<div class="count"><?php $query1 = mysqli_query($con, "SELECT * FROM data_pasien ");
-									$jumlah = mysqli_num_rows($query1); echo "$jumlah";?></div>
+						<span class="count_top"><i class="fa fa-user"></i> Total Pasien</span>
+						<div class="count">
+							<?php
+								$query1 = mysqli_query($con, "SELECT * FROM data_pasien ");
+								$jumlah = mysqli_num_rows($query1);
+								echo $jumlah;
+							?>
+						</div>
 					</div>
-					<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-							<span class="count_top"><i class="fa fa-clock-o"></i> Total Pendapatan</span>
-						<div class="count">123.50</div>
-							<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+					<div class="col-md-10 col-sm-4 col-xs-6 tile_stats_count">
+						<span class="count_top"><i class="fa fa-clock-o"></i> Total Pendapatan</span>
+						<div class="count">
+							<?php
+								$query2 = mysqli_query($con, "SELECT SUM(biaya_perawatan) AS jumlahbiaya FROM riwayat ");
+								$jumlah = mysqli_fetch_assoc($query2);
+							?>
+							Rp <?php echo $jumlah['jumlahbiaya']; ?>
+						</div>
 					</div>
 				</div>
 				<!-- /top tiles -->
 
 				<div id="columnchart_material" style="width:990px; height: 500px;"></div>
+				<div id="columnchart_material2" style="width:990px; height: 500px;"></div>
 				</br>
 			</div>
 			<!-- /page content -->

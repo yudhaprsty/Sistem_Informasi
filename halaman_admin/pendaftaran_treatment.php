@@ -118,7 +118,6 @@
 								</li>
 								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="detail_pendapatan.php">Detail Pendapatan</a></li>
 										<li><a href="grafik_pendapatan.php">Grafik Pendapatan</a></li>
 									</ul>
 								</li>
@@ -196,7 +195,34 @@
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Perawatan<span class="required"></span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-											  <input class="form-control col-md-7 col-xs-12" type="text" required=" " name="jenis_perawatan">
+											  <input class="form-control col-md-7 col-xs-12" type="text" required=" " list="datalist1" name="jenis_perawatan">
+											  <datalist id="datalist1">
+											  	<?php
+											  		$sql = mysqli_query($con, "SELECT jenis_perawatan FROM daftar_harga");
+													while ($row = $sql->fetch_assoc()){
+												?>
+													<option value="<?php echo $row['jenis_perawatan']; ?>">
+												<?php
+													}
+											  	 ?>
+											  </datalist>
+											</div>
+										</div>
+										<div class="item form-group">
+											<label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Perawatan<span class=""></span>
+											</label>
+											<div class="col-md-6 col-sm-6 col-xs-12">
+											  <input class="form-control col-md-7 col-xs-12" type="text"  list="datalist2" name="nama_perawatan">
+											  <datalist id="datalist2">
+											  	<?php
+											  		$sql = mysqli_query($con, "SELECT nama_perawatan FROM daftar_harga");
+													while ($row = $sql->fetch_assoc()){
+												?>
+													<option value="<?php echo $row['nama_perawatan']; ?>">
+												<?php
+													}
+											  	 ?>
+											  </datalist>
 											</div>
 										</div>
 										<div class="item form-group">

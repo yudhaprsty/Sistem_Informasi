@@ -84,10 +84,9 @@
 										<li><a href="daftar_riwayat_treatment_pegawai.php">Daftar Riwayat Treatment</a></li>
 									</ul>
 								</li>
-								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
+								<li><a><i class="fa fa-table"></i> Treatment <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="daftar_harga.php">Daftar Harga</a></li>
-										<li><a href="data_pendapatan.php">Data Pendapatan</a></li>
 									</ul>
 								</li>
 							</ul>

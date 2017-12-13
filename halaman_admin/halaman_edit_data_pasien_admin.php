@@ -92,7 +92,6 @@
 								</li>
 								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="detail_pendapatan.php">Detail Pendapatan</a></li>
 										<li><a href="grafik_pendapatan.php">Grafik Pendapatan</a></li>
 									</ul>
 								</li>
@@ -162,7 +161,7 @@
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12" >
-											  <select name="jenis_kelamin" class="btn btn-default dropdown-toggle">
+											  <select name="jenis_kelamin" class="form-control btn btn-default dropdown-toggle">
 												<option value="<?php echo $result_pasien['jenis_kelamin'];?>"><?php echo $result_pasien['jenis_kelamin'];?></option>
 												<option value="Male">Male</option>
 												<option value="Female">Female</option>
@@ -180,7 +179,15 @@
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Pekerjaan Pasien
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-											  <input class="form-control col-md-7 col-xs-12" type="text" value="<?php echo $result_pasien['pekerjaan_pasien'];?>" name="pekerjaan_pasien">
+											  <select name="pekerjaan_pasien" class="form_control btn btn-default dropdown-toggle">
+												<option value="<?php echo $result_pasien['pekerjaan_pasien'];?>"><?php echo $result_pasien['pekerjaan_pasien'];?></option>
+												<option value="Mahasiswi">Mahasiswi</option>
+												<option value="Dosen">Dosen</option>
+												<option value="Guru">Guru</option>
+												<option value="PNS">PNS</option>
+												<option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+												<option value="Lainnya">Lainnya</option>
+											  </select>
 											</div>
 										</div>
 										<div class="item form-group">

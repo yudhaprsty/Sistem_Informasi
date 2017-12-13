@@ -34,6 +34,12 @@
 	<link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 	<!-- Custom Theme Style -->
 	<link href="../build/css/custom.min.css" rel="stylesheet">
+	<!-- Datatables -->
+  <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+  <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -76,10 +82,9 @@
 										<li><a href="daftar_riwayat_treatment_pegawai.php">Daftar Riwayat Treatment</a></li>
 									</ul>
 								</li>
-								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
+								<li><a><i class="fa fa-table"></i> Treatment <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="daftar_harga.php">Daftar Harga</a></li>
-										<li><a href="data_pendapatan.php">Data Pendapatan</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -119,42 +124,31 @@
 					<div class="title_left">
 						<h3></h3>
 					</div>
-					<form action="daftar_riwayat_treatment_pegawai_pencarian.php" method="post">
-						<div class="title_right">
-							<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-								<div class="input-group">
-									<input type="text" name="search" class="form-control" placeholder="Search for...">
-									<span class="input-group-btn">
-										<button type="submit" class="btn btn-default">Go!</button>
-									</span>
-								</div>
-							</div>
-						</div>
-					</form>
 				</div>
 				<div class="clearfix"></div>
 				<div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<div class="x_panel">
-							<div class="x_title">
-								<h2>Daftar Pasien</h2>
-								<div class="clearfix"></div>
-							</div>
-							<div class="x_content">
-								<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Daftar Pasien</h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <table id="datatable" class="table table-striped table-bordered">
 									<thead>
 										<tr>
 											<th>No. Member</th>
 											<th>Nama Pasien</th>
 											<th>Riwayat Perawatan</th>
 											<th>Jenis Perawatan</th>
+											<th>Nama Perawatan</th>
 											<th>Biaya Perawatan</th>
 											<th>Option</th>
 										</tr>
 									</thead>
 									<tbody>
 										<?php
-											$sql = "SELECT * FROM riwayat";
+											$sql = "SELECT * FROM riwayat WHERE id_pasien!='0'";
 											$result = $con->query($sql);
 
 											if($result->num_rows > 0) {
@@ -164,6 +158,7 @@
 															<td>".$row['nama_pasien']."</td>
 															<td>".$row['riwayat_perawatan']."</td>
 															<td>".$row['jenis_perawatan']."</td>
+															<td>".$row['nama_perawatan']."</td>
 															<td>Rp ".$row['biaya_perawatan']."</td>
 															<td>
 																<a href='delete_data_riwayat.php?id_riwayat=".$row['id_riwayat']."'><button type='button' class='btn btn-danger'>Delete</button></a>
@@ -177,10 +172,10 @@
 										?>
 
 									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
+                </table>
+              </div>
+            </div>
+          </div>
 				</div>
 			</div>
 			<!-- /page content -->
@@ -234,9 +229,24 @@
 	<!-- bootstrap-daterangepicker -->
 	<script src="../vendors/moment/min/moment.min.js"></script>
 	<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
 	<!-- Custom Theme Scripts -->
 	<script src="../build/js/custom.min.js"></script>
+	<!-- Datatables -->
+	<script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+	<script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+	<script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+	<script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+	<script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+	<script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+	<script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+	<script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+	<script src="../vendors/jszip/dist/jszip.min.js"></script>
+	<script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+	<script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 </body>
 
 </html>

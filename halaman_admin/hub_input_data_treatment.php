@@ -9,11 +9,13 @@
 	$nama = $_POST['nama_pasien'];
 	$riwayat_perawatan = $_POST['riwayat_perawatan'];
 	$jenis_perawatan = $_POST['jenis_perawatan'];
+	$nama_perawatan = $_POST['nama_perawatan'];
 	$biaya_perawatan = $_POST['biaya_perawatan'];
 
-	$query = "INSERT INTO riwayat (tanggal_dateng, id_pasien, member_pasien, nama_pasien, riwayat_perawatan, jenis_perawatan, biaya_perawatan)
-						VALUES ('$tanggal_dateng', '$id_pasien', '$member', '$nama', '$riwayat_perawatan', '$jenis_perawatan', '$biaya_perawatan')";
+	$query = "INSERT INTO riwayat (tanggal_dateng, id_pasien, member_pasien, nama_pasien, riwayat_perawatan, jenis_perawatan, nama_perawatan, biaya_perawatan)
+						VALUES ('$tanggal_dateng', '$id_pasien', '$member', '$nama', '$riwayat_perawatan', '$jenis_perawatan', '$nama_perawatan', '$biaya_perawatan')";
 	$data = mysqli_query($con,$query);
+
 
 	if ($data){
 ?>

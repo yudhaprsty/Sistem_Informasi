@@ -76,10 +76,9 @@
 										<li><a href="daftar_riwayat_treatment_pegawai.php">Daftar Riwayat Treatment</a></li>
 									</ul>
 								</li>
-								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
+								<li><a><i class="fa fa-table"></i> Treatment <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="daftar_harga.php">Daftar Harga</a></li>
-										<li><a href="data_pendapatan.php">Data Pendapatan</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -152,7 +151,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-													<button type="submit" class="btn btn-primary">Cancel</button>
+													<a href="daftar_harga.php" class="btn btn-primary">Cancel</a>
 												  <button id="send" type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </div>

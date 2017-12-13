@@ -84,7 +84,6 @@
 								</li>
 								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="detail_pendapatan.php">Detail Pendapatan</a></li>
 										<li><a href="grafik_pendapatan.php">Grafik Pendapatan</a></li>
 									</ul>
 								</li>
@@ -158,7 +157,6 @@
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-6 col-md-offset-3">
-											  <a href="halaman_depan.php" class="btn btn-primary">Cancel</a>
 											  <button id="send" type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>

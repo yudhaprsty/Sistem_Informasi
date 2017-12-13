@@ -76,10 +76,9 @@
 										<li><a href="daftar_riwayat_treatment_pegawai.php">Daftar Riwayat Treatment</a></li>
 									</ul>
 								</li>
-								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
+								<li><a><i class="fa fa-table"></i> Treatment <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="daftar_harga.php">Daftar Harga</a></li>
-										<li><a href="data_pendapatan.php">Data Pendapatan</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -149,8 +148,8 @@
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin<span class="required"></span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-											  <select name="jenis_kelamin" class="btn btn-default dropdown-toggle">
-												<option value="">Choose Gender</option>
+											  <select name="jenis_kelamin" class="form-control btn btn-default dropdown-toggle">
+												<option value="">Pilih Jenis Kelamin</option>
 												<option value="Male">Male</option>
 												<option value="Female">Female</option>
 											  </select>
@@ -167,7 +166,15 @@
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Pekerjaan Pasien<span class="required"></span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-											  <input class="form-control col-md-7 col-xs-12" type="text" required=" " name="pekerjaan_pasien">
+											  <select name="pekerjaan_pasien" class="form-control btn btn-default dropdown-toggle">
+												<option value="">Pilih Pekerjaan</option>
+												<option value="Mahasiswi">Mahasiswi</option>
+												<option value="Dosen">Dosen</option>
+												<option value="Guru">Guru</option>
+												<option value="PNS">PNS</option>
+												<option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+												<option value="Lainnya">Lainnya</option>
+											  </select>
 											</div>
 										</div>
 										<div class="item form-group">
@@ -194,7 +201,6 @@
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-6 col-md-offset-3">
-											  <a href="halaman_depan_pegawai.php" class="btn btn-primary">Cancel</a>
 											  <button id="send" type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>

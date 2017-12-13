@@ -11,10 +11,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Remove Data Pasien</title>
+		<title>Delete Data Pasien</title>
 	</head>
 	<body>
-		<h3>Do you really want to remove ?</h3>
+		<h3>Do you really want to delete ?</h3>
 		<form action="hub_delete_pasien.php" method="post">
 			<button type="submit">Save Changes</button>
 			<a href="daftar_pasien.php"><button type="button">Back</button></a>

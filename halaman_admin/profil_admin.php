@@ -89,7 +89,6 @@
 								</li>
 								<li><a><i class="fa fa-table"></i> Pendapatan <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="detail_pendapatan.php">Detail Pendapatan</a></li>
 										<li><a href="grafik_pendapatan.php">Grafik Pendapatan</a></li>
 									</ul>
 								</li>

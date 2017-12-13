@@ -11,10 +11,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Remove Data Riwayat Treatment</title>
+		<title>Delete Data Riwayat Treatment</title>
 	</head>
 	<body>
-		<h3>Do you really want to remove ?</h3>
+		<h3>Do you really want to delete ?</h3>
 		<form action="hub_delete_riwayat.php" method="post">
 			<button type="submit">Save Changes</button>
 			<a href="daftar_riwayat_treatment.php"><button type="button">Back</button></a>
